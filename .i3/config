@@ -1,0 +1,133 @@
+#       _                  _      _ _____
+#  __ _| |_ ___  _ __ ___ (_) ___(_|___ /
+# / _` | __/ _ \| '_ ` _ \| |/ __| | |_ \
+#| (_| | || (_) | | | | | | | (__| |___) |
+# \__,_|\__\___/|_| |_| |_|_|\___|_|____/
+
+# Mod key is set as Super, change 4 to 1 to make it alt
+set $mod Mod4
+#Mouse+$mod drags floating windows
+floating_modifier $mod
+
+
+## PROGRAM USAGE BINDS ##
+bindsym $mod+Return exec st #					Terminal
+bindsym $mod+Shift+Return exec st; floating enable
+bindsym $mod+q kill 
+bindsym $mod+Ctrl+m exec pavucontrol # 				Audio Settings
+bindsym $mod+Ctrl+b exec st -e 'bmenu' # 			System Manager
+bindsym $mod+w exec qutebrowser # 					Browser
+
+## ROFI SCRIPTS
+bindsym $mod+d exec rofi -show run # 					Program Launcher
+bindsym $mod+x exec /home/atomic/.config/rofi/powermenu.sh # 		Power Menu
+bindsym $mod+s exec /home/atomic/.config/rofi/searchmenu.sh "firefox --new-window" #	Search Menu
+bindsym $mod+Shift+s exec /home/atomic/.config/rofi/searchmenu.sh "qutebrowser --target window"
+
+
+
+## PROGRAM MANAGEMENT ##
+bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
+bindsym Print exec --no-startup-id i3-scrot
+bindsym Shift+Print --release exec --no-startup-id i3-scrot -w
+bindsym $mod+t --release exec notify-send "The Date is `date +%A\ %B\ %d`"
+
+
+
+## WINDOWS ##
+# Borders
+default_border none
+new_float normal
+hide_edge_borders both
+font xft:URWGothic-Book 11
+# Moving
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# Orientation
+bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
+bindsym $mod+v split v;exec notify-send 'tile vertically'
+# Resizing?
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+y resize shrink width 5 px or 5 ppt
+bindsym $mod+u resize grow height 5 px or 5 ppt
+bindsym $mod+i resize shrink height 5 px or 5 ppt
+bindsym $mod+o resize grow width 5 px or 5 ppt
+bindsym $mod+minus gaps inner all minus 5
+bindsym $mod+plus gaps inner all plus 5
+
+
+## WORKSPACES ##
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+# Open Specific Applications in Floating Mode
+for_window [title="alsamixer"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="Pamac-manager"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="nm-connection-editor"] floating enable
+# Open Specific Applications in a certain workspace
+assign [class="Spotify"] $ws8
+assign [class="Discord"] $ws9
+assign [class="Steam"] $ws10
+
+
+## SYSTEM STARTUP ##
+# Sound
+exec --no-startup-id volumeicon
+exec --no-startup-id pulseaudio
+# Applications
+exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b -f -m=0.85 --config=/home/atomic/.config/compton/config
+exec --no-startup-id nm-applet
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id pamac-tray
+exec --no-startup-id clipit
+exec_always --no-startup-id ff-theme-util
+exec_always --no-startup-id fix-xcursor
+exec_always --no-startup-id /home/atomic/.config/polybar/launch.sh
+
+
+## SYSTEM MANAGEMENT ##
+bindsym $mod+Shift+r restart
+
+
+## SYSTEM SETTINGS ##
+gaps inner 14
+smart_gaps on
