@@ -43,7 +43,7 @@ case ${TERM} in
 		;;
 esac
 
-use_color=true
+use_color=false
 
 # Set colorful PS1 only on colorful terminals.
 # dircolors --print-database uses its own built-in database

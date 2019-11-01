@@ -1,0 +1,9 @@
+opacity-rule = [
+
+"90:name = 'st' && focused",
+
+"65:name = 'st' && !focused",
+
+"85:name = 'rofi'"
+
+];

@@ -1,0 +1,77 @@
+;       _                  _      _
+;  __ _| |_ ___  _ __ ___ (_) ___| |__   __ _ _ __
+; / _` | __/ _ \| '_ ` _ \| |/ __| '_ \ / _` | '__|
+;| (_| | || (_) | | | | | | | (__| |_) | (_| | |
+; \__,_|\__\___/|_| |_| |_|_|\___|_.__/ \__,_|_|
+
+[bar/bar]
+modules-left = i3
+modules-center = spotify
+modules-right = battery date wireless-network
+background = #992b303b
+foreground = #ffc0c5ce
+line-size = 1
+line-color = #ffc0c5ce
+
+module-margin = 1
+
+font-0 = "SFNS Display:style=Bold"
+font-1 = "Font Awesome 5 Free:style=Regular"
+font-2 = "Font Awesome 5 Free:style=Solid"
+font-3 = "Font Awesome 5 Brands:style=Regular"
+
+[module/date]
+type = internal/date
+
+interval = 1.0
+
+time = %l:%M
+label = %time%
+
+time-alt = %H:%M:%S
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+label-focused-underline = #c0c5ce
+label-separator = |
+label-separator-padding = 2
+label-seperator-foreground = #65737e
+
+[module/battery]
+type = internal/battery
+
+battery = BAT0
+adapter = AC
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /home/atomic/.config/polybar/polybar-spotify/spotify_status.py -t 75 -f '{play_pause} {song} - {artist} - {album}'
+
+[module/wireless-network]
+type=internal/network
+interface=wlp3s0
+format-connected = <ramp-signal>
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
+label-disconnected = oops, got disconnected
+label-disconnected-foreground = #bf616a
