@@ -129,5 +129,5 @@ bindsym $mod+Shift+r restart
 
 
 ## SYSTEM SETTINGS ##
-gaps inner 14
+gaps inner 0
 smart_gaps on
