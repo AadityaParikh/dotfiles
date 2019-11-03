@@ -6,7 +6,7 @@
 
 [bar/bar]
 modules-left = i3
-modules-center = spotify
+modules-center = mpd
 modules-right = battery date wireless-network
 background = #992b303b
 foreground = #ffc0c5ce
@@ -41,7 +41,7 @@ ws-icon-3 = 4;
 ws-icon-4 = 5;
 ws-icon-5 = 6;
 ws-icon-6 = 7;
-ws-icon-7 = 8;
+ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 
@@ -56,12 +56,17 @@ type = internal/battery
 battery = BAT0
 adapter = AC
 
-[module/spotify]
-type = custom/script
-interval = 1
-format-prefix = " "
-format = <label>
-exec = python /home/atomic/.config/polybar/polybar-spotify/spotify_status.py -t 75 -f '{play_pause} {song} - {artist} - {album}'
+[module/mpd]
+type = internal/mpd
+
+host = 127.0.0.1
+port - 6600
+
+format-online = <label-song> 	[<label-time>]
+label-song = %artist% - %title% - %album%
+
+format-offline = <label-offline>
+label-offline = MPD IS GONE
 
 [module/wireless-network]
 type=internal/network
