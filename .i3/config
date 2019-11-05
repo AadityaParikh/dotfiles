@@ -112,6 +112,8 @@ assign [class="Steam"] $ws10
 # Sound
 exec --no-startup-id volumeicon
 exec --no-startup-id pulseaudio
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b -f -m=0.85 --config=/home/atomic/.config/compton/config
