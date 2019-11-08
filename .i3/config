@@ -11,18 +11,18 @@ floating_modifier $mod
 
 
 ## PROGRAM USAGE BINDS ##
-bindsym $mod+Return exec st #					Terminal
+bindsym $mod+Return exec st #Terminal
 bindsym $mod+Shift+Return exec st; floating enable
 bindsym $mod+q kill 
-bindsym $mod+Ctrl+m exec pavucontrol # 				Audio Settings
-bindsym $mod+Ctrl+b exec st -e 'bmenu' # 			System Manager
-bindsym $mod+w exec qutebrowser # 					Browser
+bindsym $mod+Ctrl+m exec pavucontrol #Audio Settings
+bindsym $mod+Ctrl+b exec st -e 'bmenu' #System Manager
+bindsym $mod+w exec qutebrowser #Browser
 
 ## ROFI SCRIPTS
-bindsym $mod+d exec rofi -show run # 					Program Launcher
-bindsym $mod+x exec /home/atomic/.config/rofi/powermenu.sh # 		Power Menu
-bindsym $mod+s exec /home/atomic/.config/rofi/searchmenu.sh "firefox --new-window" #	Search Menu
-bindsym $mod+Shift+s exec /home/atomic/.config/rofi/searchmenu.sh "qutebrowser --target window"
+bindsym $mod+d exec rofi -show run #Program Launcher
+bindsym $mod+x exec /home/atomic/.scripts/powermenu.sh #Power Menu
+bindsym $mod+s exec /home/atomic/.scripts/searchmenu.sh "firefox --new-window" #Search Menu
+bindsym $mod+Shift+s exec /home/atomic/.scripts/searchmenu.sh "qutebrowser --target window"
 
 
 
