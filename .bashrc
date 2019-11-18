@@ -5,3 +5,5 @@ alias p='sudo pacman'
 
 #SYS VARIABLES
 EDITOR="vim"
+
+export PATH=$PATH:/home/atomic/Manual\ Installations/depot_tools/
