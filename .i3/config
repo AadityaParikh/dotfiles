@@ -31,7 +31,7 @@ bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym Shift+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+t --release exec notify-send "The Date is `date +%A\ %B\ %d`"
+bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`"
 
 
 

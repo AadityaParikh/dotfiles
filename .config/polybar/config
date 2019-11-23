@@ -7,7 +7,7 @@
 [bar/bar]
 modules-left = i3
 modules-center = mpd
-modules-right = battery date wireless-network
+modules-right = battery wireless-network
 background = #992b303b
 foreground = #ffc0c5ce
 line-size = 1
