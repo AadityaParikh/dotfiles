@@ -22,7 +22,7 @@ bindsym $mod+w exec qutebrowser #Browser
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+x exec /home/atomic/.scripts/powermenu.sh #Power Menu
 bindsym $mod+s exec /home/atomic/.scripts/searchmenu.sh "firefox --new-window" #Search Menu
-bindsym $mod+Shift+s exec /home/atomic/.scripts/searchmenu.sh "qutebrowser --target window"
+bindsym $mod+Shift+s exec /home/atomic/.scripts/searchmenu.sh "surf"
 bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 
 
