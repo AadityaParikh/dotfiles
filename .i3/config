@@ -16,7 +16,7 @@ bindsym $mod+Shift+Return exec st; floating enable
 bindsym $mod+q kill 
 bindsym $mod+Ctrl+m exec pavucontrol #Audio Settings
 bindsym $mod+Ctrl+b exec st -e 'bmenu' #System Manager
-bindsym $mod+w exec qutebrowser #Browser
+bindsym $mod+w exec firefox #Browser
 
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
@@ -119,10 +119,7 @@ bindsym XF86AudioPrev exec mpc prev
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b -f -m=0.85 --config=/home/atomic/.config/compton/config
-exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
-exec --no-startup-id clipit
 exec --no-startup-id mpd
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix-xcursor
