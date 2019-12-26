@@ -31,7 +31,7 @@ bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym Shift+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`"
+bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r && acpi`"
 
 
 
@@ -123,7 +123,7 @@ exec --no-startup-id xfce4-power-manager
 exec --no-startup-id mpd
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix-xcursor
-exec_always --no-startup-id /home/atomic/.config/polybar/launch.sh
+#exec_always --no-startup-id /home/atomic/.config/polybar/launch.sh # may be temp
 
 
 ## SYSTEM MANAGEMENT ##
