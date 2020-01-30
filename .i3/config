@@ -118,7 +118,8 @@ bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev 
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always --no-startup-id nitrogen --restore; sleep 1; compton -b -f -m=0.85 --config=/home/atomic/.config/compton/config
+exec_always --no-startup-id nitrogen --restore; sleep 1
+#exec_always --no-startup-id compton -b -f -m=0.85 --config=/home/atomic/.config/compton/config
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id mpd
 exec_always --no-startup-id ff-theme-util
