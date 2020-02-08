@@ -17,6 +17,7 @@ bindsym $mod+q kill
 bindsym $mod+Ctrl+m exec pavucontrol #Audio Settings
 bindsym $mod+Ctrl+b exec st -e 'bmenu' #System Manager
 bindsym $mod+w exec firefox #Browser
+bindsym $mod+n border none
 
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
