@@ -6,6 +6,7 @@ alias p='sudo pacman'
 alias startx='echo elinks is your friend'
 alias xinit='echo elinks is your friend'
 alias bc='bc -sql'
+alisa vlcFB='vlc --fbdev /dev/fb0'
 
 #SYS VARIABLES
 EDITOR="vim"
