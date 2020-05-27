@@ -107,7 +107,20 @@ label-offline = MPD IS GONE
 
 [module/wireless-network]
 type=internal/network
-interface=wlp3s0
+interface=wlan0
+format-connected = <ramp-signal>
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+ramp-signal-4 = 
+ramp-signal-5 = 
+label-disconnected = 0
+label-disconnected-foreground = #bf616a
+
+[module/wired-network]
+type=internal/network
+interface=enp37s0
 format-connected = <ramp-signal>
 ramp-signal-0 = 
 ramp-signal-1 = 
