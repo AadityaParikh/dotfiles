@@ -20,7 +20,7 @@ bindsym $mod+w exec firefox #Browser
 bindsym $mod+n border none
 bindsym $mod+a move scratchpad
 bindsym $mod+Shift+a scratchpad show
-bindsym $mod+z exec ocr.sh
+bindsym $mod+z exec /home/atomic/.scripts/ocr.sh
 
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
