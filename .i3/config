@@ -21,6 +21,7 @@ bindsym $mod+n border none
 bindsym $mod+a move scratchpad
 bindsym $mod+Shift+a scratchpad show
 bindsym $mod+z exec /home/atomic/.scripts/ocr.sh
+bindsym $mod+Insert exec "xclip -o -se c > /tmp/clipboard; exec notify-send 'saved to /tmp/clipboard'"
 
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
