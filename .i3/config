@@ -14,7 +14,7 @@ floating_modifier $mod
 bindsym $mod+Return exec st #Terminal
 bindsym $mod+Shift+Return exec st; floating enable
 bindsym $mod+q kill 
-bindsym $mod+Ctrl+m exec pavucontrol #Audio Settings
+bindsym $mod+Ctrl+m exec st -e 'pulsemixer' #Audio Settings
 bindsym $mod+Ctrl+b exec st -e 'bmenu' #System Manager
 bindsym $mod+w exec firefox #Browser
 bindsym $mod+n border none

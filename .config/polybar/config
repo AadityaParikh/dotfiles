@@ -7,7 +7,7 @@
 [bar/bar]
 modules-left = i3 date
 modules-center = mpd
-modules-right = ram cpu battery wireless-network 
+modules-right = ram cpu battery wireless-network ping
 background = #992b303b
 foreground = #ffc0c5ce
 line-size = 1
@@ -19,6 +19,15 @@ font-0 = "SFNS Display:style=Bold"
 font-1 = "Font Awesome 5 Free:style=Regular"
 font-2 = "Font Awesome 5 Free:style=Solid"
 font-3 = "Font Awesome 5 Brands:style=Regular"
+
+[module/ping]
+type = custom/script
+
+exec = /home/atomic/.scripts/ping.sh
+
+interval = 1
+
+label = PNG %output%
 
 [module/cpu]
 type = internal/cpu
