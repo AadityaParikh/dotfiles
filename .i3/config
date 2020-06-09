@@ -20,6 +20,7 @@ bindsym $mod+w exec firefox #Browser
 bindsym $mod+n border none
 bindsym $mod+a move scratchpad
 bindsym $mod+Shift+a scratchpad show
+bindsym $mod+z exec ocr.sh
 
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
@@ -33,8 +34,8 @@ bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 
 ## PROGRAM MANAGEMENT ##
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym Shift+Print --release exec --no-startup-id i3-scrot -w
+bindsym Print exec --no-startup-id maim -f png | xclip -se c -t image/png
+bindsym Shift+Print --release exec --no-startup-id maim -s -f png | xclip -se c -t image/png
 bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r && acpi`"
 
 
