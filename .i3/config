@@ -122,8 +122,8 @@ exec --no-startup-id pulseaudio
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev 
-bindsym $mod+comma exec --no-startup-id pactl set-sink-volume 0 -- +10% && killall -SIGUSR1 i3status
-bindsym $mod+period exec --no-startup-id pactl set-sink-volume 0 -- -10% && killall -SIGUSR1 i3status
+bindsym $mod+comma exec --no-startup-id pactl set-sink-volume 0 -10%
+bindsym $mod+period exec --no-startup-id pactl set-sink-volume 0 +10%
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id nitrogen --restore; sleep 1
