@@ -26,8 +26,6 @@ bindsym $mod+Insert exec "xclip -o -se c > /tmp/clipboard; exec notify-send 'sav
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+x exec /home/atomic/.scripts/powermenu.sh #Power Menu
-bindsym $mod+s exec /home/atomic/.scripts/searchmenu.sh "firefox --new-window" #Search Menu
-bindsym $mod+Shift+s exec /home/atomic/.scripts/searchmenu.sh "surf"
 bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 
