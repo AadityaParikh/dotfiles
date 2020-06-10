@@ -125,7 +125,7 @@ bindsym $mod+period exec --no-startup-id pactl set-sink-volume 0 +10%
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id nitrogen --restore; sleep 1
-#exec_always --no-startup-id compton -b -f -m=0.85 --config=/home/atomic/.config/compton/config
+exec_always --no-startup-id compton -b -f -m=0.25 --config=/home/atomic/.config/compton/config
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id mpd
 exec_always --no-startup-id ff-theme-util
