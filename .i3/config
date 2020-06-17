@@ -54,6 +54,17 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
+# Cursor
+bindsym $mod+Shift+y exec xdotool mousemove_relative -- -25 +0
+bindsym $mod+Shift+u exec xdotool mousemove_relative -- +0 +25
+bindsym $mod+Shift+i exec xdotool mousemove_relative -- +0 -25
+bindsym $mod+Shift+o exec xdotool mousemove_relative -- +25 -0
+bindsym $mod+bracketLeft exec xdotool mousedown 1
+bindsym $mod+bracketRight exec xdotool mouseup 1
+bindsym $mod+Shift+bracketLeft exec xdotool mousedown 2
+bindsym $mod+Shift+bracketRight exec xdotool mouseup 2
+bindsym $mod+backslash exec xdotool click 1
+bindsym $mod+bar exec xdotool click 2
 # Orientation
 bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
