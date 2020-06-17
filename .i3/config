@@ -33,8 +33,8 @@ bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 
 ## PROGRAM MANAGEMENT ##
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id maim -f png | xclip -se c -t image/png
-bindsym Shift+Print --release exec --no-startup-id maim -s -f png | xclip -se c -t image/png
+bindsym Print exec --no-startup-id maim -kB -f png | xclip -se c -t image/png
+bindsym Shift+Print --release exec --no-startup-id maim -skB -f png | xclip -se c -t image/png
 bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r && acpi`"
 
 
@@ -64,7 +64,7 @@ bindsym $mod+bracketRight exec xdotool mouseup 1
 bindsym $mod+Shift+bracketLeft exec xdotool mousedown 2
 bindsym $mod+Shift+bracketRight exec xdotool mouseup 2
 bindsym $mod+backslash exec xdotool click 1
-bindsym $mod+bar exec xdotool click 2
+bindsym $mod+slash exec xdotool click 2
 # Orientation
 bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
