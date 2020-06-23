@@ -12,17 +12,15 @@ floating_modifier $mod
 
 ## PROGRAM USAGE BINDS ##
 bindsym $mod+Return exec st #Terminal
-bindsym $mod+Shift+Return exec st; floating enable
 bindsym $mod+q kill 
 bindsym $mod+Ctrl+m exec st -e 'pulsemixer' #Audio Settings
-bindsym $mod+Ctrl+b exec st -e 'bmenu' #System Manager
 bindsym $mod+w exec firefox #Browser
 bindsym $mod+n border none
-bindsym $mod+a move scratchpad
-bindsym $mod+Shift+a scratchpad show
+bindsym $mod+Shift+a move scratchpad
+bindsym $mod+a scratchpad show
 bindsym $mod+Shift+n exec /home/atomic/.scripts/ocr.sh
 bindsym $mod+Insert exec "xclip -o -se c > /tmp/clipboard; exec notify-send 'saved to /tmp/clipboard'"
-bindsym $mod+b exec "bluetoothctl devices | rofi -dmenu -p 'Bluetooth Deviced' | cut -d ' ' -f 2 xargs -I % bluetoothctl connect %"
+bindsym $mod+b exec "bluetoothctl devices | rofi -dmenu -p 'Bluetooth Deviced' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
 
 ## ROFI SCRIPTS
 bindsym $mod+d exec rofi -show run #Program Launcher
@@ -36,7 +34,7 @@ bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym $mod+Shift+z exec --no-startup-id maim -kB -f png | xclip -se c -t image/png
 bindsym $mod+z --release exec --no-startup-id maim -skB -f png | xclip -se c -t image/png
-bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r && acpi`"
+bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`"
 
 
 
@@ -51,24 +49,13 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-# Cursor
-bindsym $mod+y exec xdotool mousemove_relative -- -25 +0
-bindsym $mod+u exec xdotool mousemove_relative -- +0 +25
-bindsym $mod+i exec xdotool mousemove_relative -- +0 -25
-bindsym $mod+o exec xdotool mousemove_relative -- +25 -0
-bindsym $mod+bracketleft exec xdotool mousedown 1
-bindsym $mod+bracketright exec xdotool mouseup 1
-bindsym $mod+Shift+bracketleft exec xdotool mousedown 3
-bindsym $mod+Shift+bracketlight exec xdotool mouseup 3
-bindsym $mod+backslash exec xdotool click 1
-bindsym $mod+Shift+backslash exec xdotool click 3
+bindsym $mod+Ctrl+Shift+h move left
+bindsym $mod+Ctrl+Shift+j move down
+bindsym $mod+Ctrl+Shift+k move up
+bindsym $mod+Ctrl+Shift+l move right
 # Orientation
-bindsym $mod+semicolon split h;exec notify-send 'tile horizontally'
-bindsym $mod+v split v;exec notify-send 'tile vertically'
+bindsym $mod+Shift+semicolon split h;exec notify-send 'tile horizontally'
+bindsym $mod+semicolon split v;exec notify-send 'tile vertically'
 # Resizing?
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
@@ -79,6 +66,25 @@ bindsym $mod+Shift+i resize shrink height 5 px or 5 ppt
 bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
 bindsym $mod+minus gaps inner all minus 5
 bindsym $mod+plus gaps inner all plus 5
+
+
+## COMPENSATION ##
+# Cursor
+bindsym $mod+Shift+h exec xdotool mousemove_relative -- -25 +0
+bindsym $mod+Shift+j exec xdotool mousemove_relative -- +0 +25
+bindsym $mod+Shift+k exec xdotool mousemove_relative -- +0 -25
+bindsym $mod+Shift+l exec xdotool mousemove_relative -- +25 -0
+bindsym $mod+bracketleft exec xdotool mousedown 1
+bindsym $mod+bracketright exec xdotool mouseup 1
+bindsym $mod+Shift+bracketleft exec xdotool mousedown 3
+bindsym $mod+Shift+bracketlight exec xdotool mouseup 3
+bindsym $mod+backslash exec xdotool click 1
+bindsym $mod+Shift+backslash exec xdotool click 3
+# Keys
+bindsym $mod+y exec xdotool key Left
+bindsym $mod+u exec xdotool key Down
+bindsym $mod+i exec xdotool key Up
+bindsym $mod+o exec xdotool key Right
 
 
 ## WORKSPACES ##
@@ -112,28 +118,16 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
-# Open Specific Applications in Floating Mode
-for_window [title="alsamixer"] floating enable
-for_window [class="Lxappearance"] floating enable
-for_window [class="Nitrogen"] floating enable
-for_window [class="Pamac-manager"] floating enable
-for_window [class="Pavucontrol"] floating enable
-for_window [class="nm-connection-editor"] floating enable
-# Open Specific Applications in a certain workspace
-assign [class="Spotify"] $ws8
-assign [class="Discord"] $ws9
-assign [class="Steam"] $ws10
 
 
 ## SYSTEM STARTUP ##
 # Sound
-exec --no-startup-id volumeicon
 exec --no-startup-id pulseaudio
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpc prev 
-bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
-bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym $mod+comma exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+period exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id nitrogen --restore; sleep 1
