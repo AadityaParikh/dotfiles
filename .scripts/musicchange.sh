@@ -7,7 +7,7 @@ choice="$(printf "Change Song\nPlay Toggle\nForward\nBackwards\nRestart" | rofi 
 
 case $choice in
 	"Change Song")
-		mpc -f %title% listall | rofi -dmenu -p "song" | xargs -I % mpc searchplay title %
+		mpc -f %title% listall | rofi -dmenu -i -p "song" | xargs -I % mpc searchplay title %
 		;;
 	"Play Toggle")
 		mpc toggle

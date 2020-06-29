@@ -7,7 +7,7 @@
 [bar/bar]
 modules-left = i3 date
 modules-center = mpd
-modules-right = ram cpu battery wireless-network ping
+modules-right = ram cpu battery wireless-network ping todo
 background = #992b303b
 foreground = #ffc0c5ce
 line-size = 1
@@ -15,10 +15,19 @@ line-color = #ffc0c5ce
 
 module-margin = 1
 
-font-0 = "SFNS Display:style=Bold"
+font-0 = "SFNS Display:style=Regular"
 font-1 = "Font Awesome 5 Free:style=Regular"
 font-2 = "Font Awesome 5 Free:style=Solid"
 font-3 = "Font Awesome 5 Brands:style=Regular"
+
+[module/todo]
+type = custom/script
+
+exec = "cat /home/atomic/todo.txt | wc -l"
+
+interval = 5
+
+label = TODO %output%
 
 [module/ping]
 type = custom/script
@@ -27,7 +36,7 @@ exec = /home/atomic/.scripts/ping.sh
 
 interval = 1
 
-label = PNG %output%
+label = PING %output%
 
 [module/cpu]
 type = internal/cpu

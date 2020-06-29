@@ -4,6 +4,10 @@ opacity-rule = [
 
 "65:name = 'st' && !focused",
 
-"85:name = 'rofi'"
+"85:name = 'rofi'",
+
+"90:name = 'mupdf' && focused",
+
+"65:name = 'mupdf' && !focused"
 
 ];

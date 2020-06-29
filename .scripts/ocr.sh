@@ -21,7 +21,7 @@ for dependency in "${dependencies[@]}"; do
 done
 
 # Take screenshot by selecting the area
-maim -s "$IMAGE_FILE"
+maim -sk "$IMAGE_FILE"
 
 # Get the exit code of the previous command.
 # So in this case, it is the screenshot command. If it did not exit with an
