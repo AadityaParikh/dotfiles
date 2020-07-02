@@ -2,7 +2,7 @@
 #I'm sorry
 
 mpc add /
-choice="$(printf "Change Song\nPlay Toggle\nForward\nBackwards\nRestart" | rofi -dmenu -p "Music Controls")"
+choice="$(printf "Play Toggle\nChange Song\nForward\nBackwards\nRestart" | rofi -dmenu -i -p "Music Controls")"
 
 
 case $choice in
