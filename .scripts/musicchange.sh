@@ -1,8 +1,8 @@
-#!/bin/bash
-#I'm sorry
+#!/bin/sh
+
 
 mpc add /
-choice="$(printf "Play Toggle\nChange Song\nForward\nBackwards\nRestart" | rofi -dmenu -i -p "Music Controls")"
+choice="$(printf "Play Toggle\nChange Song\nForward\nBackwards\nRestart\nShuffle" | rofi -dmenu -i -p "Music Controls")"
 
 
 case $choice in
@@ -20,5 +20,8 @@ case $choice in
 		;;
 	"Restart")
 		mpc prev && mpc next
+		;;
+	"Shuffle")
+		mpc shuffle
 		;;
 esac

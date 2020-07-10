@@ -80,6 +80,8 @@ bindsym $mod+Shift+bracketleft exec xdotool mousedown 3
 bindsym $mod+Shift+bracketlight exec xdotool mouseup 3
 bindsym $mod+backslash exec xdotool click 1
 bindsym $mod+Shift+backslash exec xdotool click 3
+bindsym $mod+Shift+comma exec xdotool click 5
+bindsym $mod+Shift+period exec xdotool click 4
 # Keys
 bindsym $mod+y exec xdotool key Left
 bindsym $mod+u exec xdotool key Down
