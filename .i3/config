@@ -82,11 +82,10 @@ bindsym $mod+backslash exec xdotool click 1
 bindsym $mod+Shift+backslash exec xdotool click 3
 bindsym $mod+Shift+comma exec xdotool click 5
 bindsym $mod+Shift+period exec xdotool click 4
-# Keys
-bindsym $mod+y exec xdotool key Left
-bindsym $mod+u exec xdotool key Down
-bindsym $mod+i exec xdotool key Up
-bindsym $mod+o exec xdotool key Right
+bindsym $mod+y exec xdotool mousemove_relative -- -1 +0
+bindsym $mod+u exec xdotool mousemove_relative -- +0 +1
+bindsym $mod+i exec xdotool mousemove_relative -- +0 -1
+bindsym $mod+o exec xdotool mousemove_relative -- +1 -0
 
 
 ## WORKSPACES ##
