@@ -2,6 +2,8 @@
 filetype plugin on
 set ai
 syntax on 
+set tabstop=4
+set shiftwidth=0
 
 " Pairing for braces
 inoremap {      {}<Left>
