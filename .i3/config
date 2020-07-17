@@ -19,7 +19,7 @@ bindsym $mod+n border none
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
 bindsym $mod+Shift+n exec /home/atomic/.scripts/ocr.sh
-bindsym $mod+Insert exec "xclip -o -se c > /tmp/clipboard; exec notify-send 'saved to /tmp/clipboard'"
+bindsym $mod+Shift+t exec "xclip -o -se c > /tmp/clipboard; exec notify-send 'saved to /tmp/clipboard'"
 bindsym $mod+b exec "bluetoothctl devices | rofi -dmenu -p 'Bluetooth Deviced' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
 
 ## ROFI SCRIPTS
