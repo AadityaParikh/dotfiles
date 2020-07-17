@@ -7,6 +7,5 @@ export EDITOR="vim"
 alias p='sudo pacman'
 alias bc='bc -sql'
 alias gitA='git add . && git commit'
-alias dup='st & disown'
 
 export PATH=$PATH:/home/atomic/.scripts/
