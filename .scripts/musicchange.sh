@@ -21,7 +21,10 @@ case $choice in
 	"Restart")
 		mpc prev && mpc next
 		;;
-	"Shuffle")
+	"Hard Shuffle")
 		mpc crop && mpc add /
+		;;
+	"Shuffle")
+		mpc shuffle
 		;;
 esac
