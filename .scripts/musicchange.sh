@@ -22,6 +22,6 @@ case $choice in
 		mpc prev && mpc next
 		;;
 	"Shuffle")
-		mpc shuffle
+		mpc crop && mpc add /
 		;;
 esac
