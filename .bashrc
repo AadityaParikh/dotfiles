@@ -7,5 +7,7 @@ export EDITOR="vim"
 alias p='sudo pacman'
 alias bc='bc -sql'
 alias gitA='git add . && git commit'
+alias fA='fzf | xargs -I{} xdg-open {}'
+
 
 export PATH=$PATH:/home/atomic/.scripts/
