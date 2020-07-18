@@ -4,6 +4,7 @@ set ai
 syntax on 
 set tabstop=4
 set shiftwidth=0
+set fdm=syntax
 
 " Pairing for braces
 inoremap {      {}<Left>
@@ -20,3 +21,6 @@ inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\
 
 " Placeholder
 inoremap <c-j> <Esc>/<++><CR><Esc>cf>
+
+" makefile
+map <f9> :make
