@@ -4,11 +4,13 @@
 #| (_| | || (_) | | | | | | | (__| |___) |
 # \__,_|\__\___/|_| |_| |_|_|\___|_|____/
 
+## SETTINGS ##
 # Mod key is set as Super, change 4 to 1 to make it alt
 set $mod Mod4
 #Mouse+$mod drags floating windows
 floating_modifier $mod
-
+gaps inner 0
+smart_gaps on
 
 ## PROGRAM USAGE BINDS ##
 bindsym $mod+Return exec st #Terminal
@@ -54,8 +56,9 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 # Orientation
-bindsym $mod+Shift+semicolon split h;exec notify-send 'tile horizontally'
-bindsym $mod+semicolon split v;exec notify-send 'tile vertically'
+bindsym $mod+Ctrl+Shift+semicolon split h
+bindsym $mod+Shift+semicolon split v
+bindsym $mod+semicolon split toggle
 # Resizing?
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
@@ -144,6 +147,3 @@ exec_always --no-startup-id /home/atomic/.config/polybar/launch.sh
 bindsym $mod+Shift+r restart
 
 
-## SYSTEM SETTINGS ##
-gaps inner 0
-smart_gaps on
