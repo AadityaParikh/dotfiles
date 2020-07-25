@@ -15,12 +15,17 @@ inoremap {}     {}
 " Pairing for parentheses
 inoremap        (  ()<Left>
 inoremap <expr> )  strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap ((		(
 
 " Pairing for quotes
 inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
+inoremap ""		"
 
 " Placeholder
-inoremap <c-j> <Esc>/<++><CR><Esc>cf>
+inoremap <c-j>	<Esc>/<++><CR><Esc>cf>
 
 " makefile
-map <f9> :make
+nnoremap <f9>	:make
+
+" writing with a shortcut
+nnoremap ZA		:w<CR>
