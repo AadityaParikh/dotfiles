@@ -118,7 +118,7 @@ host = 127.0.0.1
 port - 6600
 
 format-online = <label-song> 	[<label-time>]
-label-song = %title% - %artist% 
+label-song = %artist% - %title%
 label-song-alt = %title% - %album% - %artist%
 
 format-offline = <label-offline>
