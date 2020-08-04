@@ -119,6 +119,7 @@ port - 6600
 
 format-online = <label-song> 	[<label-time>]
 label-song = %title% - %artist% 
+label-song-alt = %title% - %album% - %artist%
 
 format-offline = <label-offline>
 label-offline = MPD IS GONE

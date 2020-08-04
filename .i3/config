@@ -12,32 +12,29 @@ floating_modifier $mod
 gaps inner 0
 smart_gaps on
 
-## PROGRAM USAGE BINDS ##
+## CALLING PROGRAMS ##
 bindsym $mod+Return exec st #Terminal
 bindsym $mod+q kill 
 bindsym $mod+Ctrl+m exec st -e 'pulsemixer' #Audio Settings
 bindsym $mod+w exec firefox #Browser
-bindsym $mod+n border none
+bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
 bindsym $mod+Shift+n exec /home/atomic/.scripts/ocr.sh
 bindsym $mod+Shift+t exec /home/atomic/.scripts/clipInsert.sh
-bindsym $mod+b exec "bluetoothctl devices | rofi -dmenu -p 'Bluetooth Deviced' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
+bindsym $mod+b exec "bluetoothctl devices | rofi -dmenu -p 'Bluetooth Devices' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
+bindsym $mod+Shift+z exec --no-startup-id maim -kB -f png | xclip -se c -t image/png
+bindsym $mod+z --release exec --no-startup-id maim -skB -f png | xclip -se c -t image/png
+bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`" "`cal`"
 
-## ROFI SCRIPTS
+# Rofi Scripts
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+x exec /home/atomic/.scripts/powermenu.sh #Power Menu
 bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 
-
-
-## PROGRAM MANAGEMENT ##
+# Program Management #
 bindsym $mod+Shift+d --release exec "killall dunst" 
-bindsym $mod+Shift+z exec --no-startup-id maim -kB -f png | xclip -se c -t image/png
-bindsym $mod+z --release exec --no-startup-id maim -skB -f png | xclip -se c -t image/png
-bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`" "`cal`"
-
 
 
 ## WINDOWS ##
@@ -45,7 +42,6 @@ bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`" "`cal`"
 default_border none
 new_float normal
 hide_edge_borders both
-font xft:URWGothic-Book 11
 # Moving
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -69,26 +65,6 @@ bindsym $mod+Shift+i resize shrink height 5 px or 5 ppt
 bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
 bindsym $mod+minus gaps inner all minus 5
 bindsym $mod+plus gaps inner all plus 5
-
-
-## COMPENSATION ##
-# Cursor
-bindsym $mod+Ctrl+Shift+h exec xdotool mousemove_relative -- -25 +0
-bindsym $mod+Ctrl+Shift+j exec xdotool mousemove_relative -- +0 +25
-bindsym $mod+Ctrl+Shift+k exec xdotool mousemove_relative -- +0 -25
-bindsym $mod+Ctrl+Shift+l exec xdotool mousemove_relative -- +25 -0
-bindsym $mod+bracketleft exec xdotool mousedown 1
-bindsym $mod+bracketright exec xdotool mouseup 1
-bindsym $mod+Shift+bracketleft exec xdotool mousedown 3
-bindsym $mod+Shift+bracketlight exec xdotool mouseup 3
-bindsym $mod+backslash exec xdotool click 1
-bindsym $mod+Shift+backslash exec xdotool click 3
-bindsym $mod+Shift+comma exec xdotool click 5
-bindsym $mod+Shift+period exec xdotool click 4
-bindsym $mod+y exec xdotool mousemove_relative -- -1 +0
-bindsym $mod+u exec xdotool mousemove_relative -- +0 +1
-bindsym $mod+i exec xdotool mousemove_relative -- +0 -1
-bindsym $mod+o exec xdotool mousemove_relative -- +1 -0
 
 
 ## WORKSPACES ##
