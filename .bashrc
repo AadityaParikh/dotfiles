@@ -10,7 +10,7 @@ alias bc='bc -sql'
 alias gitA='git add . && git commit'
 alias fA='fzf -e | xargs -I{} -0 xdg-open {};bg;disown'
 alias fuck='sudo $(history -p !!)'
-alias why='dmesg -wH | less'
+alias why='dmesg -w | less'
 function mkc() {
 	mkdir $1
 	cd $1
