@@ -29,3 +29,6 @@ nnoremap <f9>	:make
 
 " writing with a shortcut
 nnoremap ZA		:w<CR>
+
+" commenting out things
+" vnoremap <c-c>	:'<,'>norm ggi/*\<C-C>Gi*/\<C-C>
