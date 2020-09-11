@@ -11,3 +11,5 @@ set imap_pass = "mzhn hwey iute puct"
 set spoolfile = "+INBOX"
 
 mailboxes =INBOX 
+
+set new_mail_command="notify-send New Email' '%n new messages, %u unread.' &"
