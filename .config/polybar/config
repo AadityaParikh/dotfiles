@@ -118,8 +118,7 @@ host = 127.0.0.1
 port - 6600
 
 format-online = <label-song> 	[<label-time>]
-label-song = %artist% - %title%
-label-song-alt = %title% - %album% - %artist%
+label-song = %artist% - %album% - %title%
 
 format-offline = <label-offline>
 label-offline = MPD IS GONE
