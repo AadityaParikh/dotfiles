@@ -21,6 +21,7 @@ bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
 bindsym $mod+Shift+n exec /home/atomic/.scripts/ocr.sh
+bindsym $mod+Ctrl+n exec /home/atomic/.scripts/colorPick.sh
 bindsym $mod+Shift+t exec /home/atomic/.scripts/clipInsert.sh
 bindsym $mod+b exec "bluetoothctl devices | rofi -dmenu -p 'Bluetooth Devices' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
 bindsym $mod+Shift+z exec --no-startup-id maim -kB -f png | xclip -se c -t image/png

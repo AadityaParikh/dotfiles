@@ -11,7 +11,6 @@ Backwards\n\
 Restart\n\
 Hard Shuffle\n\
 Shuffle\n\
-List\n\
 Listen by Album\n\
 Listen by Artist\
 " | rofi -dmenu -i -p "Music Controls")"
@@ -40,18 +39,15 @@ case $choice in
 		mpc prev && mpc next
 		;;
 	"Hard Shuffle")
-		mpc clear && mpc add /
+		mpc clear && mpc add / && mpc shuffle
 		;;
 	"Shuffle")
 		mpc shuffle
 		;;
-	"List")
-		notify-send "`mpc playlist`"
-		;;
 	"Listen by Album")
 		mpc clear
 		ARTIST=`mpc list artist | rofi -dmenu -p "Artist"`
-		mpc find album "`mpc -f %album% search artist $ARTIST | uniq | rofi -dmenu -p "Album"`" artist "$ARTIST" | mpc add
+		mpc find album "`mpc -f %album% search artist "$ARTIST" | uniq | rofi -dmenu -p "Album"`" artist "$ARTIST" | mpc add
 		;;
 	"Listen by Artist")
 		mpc clear
