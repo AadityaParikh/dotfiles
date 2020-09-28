@@ -1,9 +1,6 @@
 #!/bin/sh
 
-
-mpc add /
 choice="$(printf "Play Toggle\n\
-Change Song\n\
 Insert Song\n\
 Find Song\n\
 Forward\n\
@@ -11,20 +8,18 @@ Backwards\n\
 Restart\n\
 Hard Shuffle\n\
 Shuffle\n\
-Listen by Album\n\
-Listen by Artist\
+Insert by Album\n\
+Insert by Artist\n\
+Clear\
 " | rofi -dmenu -i -p "Music Controls")"
 
 ARTIST=""
 case $choice in
-	"Change Song")
-		mpc -f %title% listall | rofi -dmenu -i -p "song" | xargs -I{} mpc find title {} | xargs -I{} mpc insert {} && mpc next
-		;;
 	"Find Song")
-		mpc -f %title% listall | rofi -dmenu -i -p "song" | xargs -I{} mpc searchplay {}
+		mpc listall | rofi -dmenu -i -p "song" | xargs -I{} mpc searchplay {}
 		;;
 	"Insert Song")
-		mpc -f %title% listall | rofi -dmenu -i -p "song" | xargs -I{} mpc find title {} | xargs -I{} mpc insert {}
+		mpc listall | rofi -dmenu -i -p "song" | xargs -I{} mpc insert {}
 		;;
 	"Play Toggle")
 		mpc toggle
@@ -44,13 +39,14 @@ case $choice in
 	"Shuffle")
 		mpc shuffle
 		;;
-	"Listen by Album")
-		mpc clear
-		ARTIST=`mpc list artist | rofi -dmenu -p "Artist"`
-		mpc find album "`mpc -f %album% search artist "$ARTIST" | uniq | rofi -dmenu -p "Album"`" artist "$ARTIST" | mpc add
+	"Insert by Album")
+	 	ARTIST=`mpc list artist | rofi -dmenu -i -p "Artist"`
+	 	mpc find album "`mpc -f %album% search artist "$ARTIST" | uniq | rofi -dmenu -i -p "Album"`" artist "$ARTIST" | mpc insert
+	 	;;
+	"Insert by Artist")
+		mpc search artist "`mpc list artist | rofi -dmenu -i -p "Artist"`" | mpc insert
 		;;
-	"Listen by Artist")
+	"Clear")
 		mpc clear
-		mpc search artist "`mpc list artist | rofi -dmenu -p "Artist"`" | mpc add
 		;;
 esac
