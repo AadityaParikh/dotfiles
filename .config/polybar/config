@@ -8,10 +8,10 @@
 modules-left = i3 date
 modules-center = mpd
 modules-right = todo ram cpu battery wireless-network ping 
-background = #992b303b
-foreground = #ffc0c5ce
+background = #000000
+foreground = #FFFFFF
 line-size = 1
-line-color = #ffc0c5ce
+line-color = #FFFFFF
 
 module-margin = 1
 
@@ -23,7 +23,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular"
 [module/todo]
 type = custom/script
 
-exec = "cat /home/atomic/todo.txt | grep -v '^x' | wc -l"
+exec = "cat /home/atomic/todo.txt | grep -v '^$' | wc -l"
 
 interval = 5
 

@@ -1,10 +1,10 @@
 opacity-rule = [
 	"90:name = 'st' && focused",
 	"65:name = 'st' && !focused",
-	"85:name = 'rofi'",
+	"65:name = 'rofi' && focused",
+	"65:name = 'rofi' && !focused",
 	"90:name = 'mupdf' && focused",
-	"65:name = 'mupdf' && !focused",
-	"100:name = 'firefox'"
+	"65:name = 'mupdf' && !focused"
 ];
 
 wintypes:
