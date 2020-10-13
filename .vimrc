@@ -4,7 +4,6 @@ set ai
 syntax on 
 set tabstop=4
 set shiftwidth=0
-set fdm=syntax
 
 " Pairing for braces
 inoremap {      {}<Left>
@@ -22,13 +21,20 @@ inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\
 inoremap ""		"
 
 " Placeholder
-inoremap <c-j>	<Esc>/<++><CR><Esc>cf>
+nnoremap <c-j>	<Esc>/<++><CR><Esc>cf>
+
+" Number Toggling
+nnoremap <c-n> :set invnumber<CR>
 
 " makefile
-nnoremap <f9>	:make
+nnoremap <f9>	:make<CR>
+
+" test compiling per lang
+autocmd FileType java	nnoremap <f5> :!javac %<CR>
+autocmd FileType java	nnoremap <f6> :!java %<<CR>
+autocmd FileType c		nnoremap <f5> :!gcc %<CR>
+autocmd FileType c		nnoremap <f5> :!./a.out %<<CR>
 
 " writing with a shortcut
 nnoremap ZA		:w<CR>
 
-" commenting out things
-" vnoremap <c-c>	:'<,'>norm ggi/*\<C-C>Gi*/\<C-C>
