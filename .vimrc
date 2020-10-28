@@ -33,7 +33,9 @@ nnoremap <f9>	:make<CR>
 autocmd FileType java	nnoremap <f5> :!javac %<CR>
 autocmd FileType java	nnoremap <f6> :!java %<<CR>
 autocmd FileType c		nnoremap <f5> :!gcc %<CR>
-autocmd FileType c		nnoremap <f5> :!./a.out %<<CR>
+autocmd FileType c		nnoremap <f6> :!./a.out<CR>
+autocmd FileType scad	nnoremap <f5> :!openscad -o %<.stl %<CR>
+autocmd FileType scad	nnoremap <f6> :!fstl %<.stl<CR>
 
 " writing with a shortcut
 nnoremap ZA		:w<CR>

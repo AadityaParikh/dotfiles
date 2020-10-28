@@ -101,6 +101,9 @@ label-separator = |
 label-separator-padding = 2
 label-seperator-foreground = #65737e
 
+enable-click = false
+enable-scoll = false
+
 [module/battery]
 type = internal/battery
 
