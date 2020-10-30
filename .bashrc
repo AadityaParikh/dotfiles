@@ -1,3 +1,9 @@
+#       _                  _          _     
+#  __ _| |_ ___  _ __ ___ (_) ___ ___| |__  
+# / _` | __/ _ \| '_ ` _ \| |/ __/ __| '_ \ 
+#| (_| | || (_) | | | | | | | (__\__ \ | | |
+# \__,_|\__\___/|_| |_| |_|_|\___|___/_| |_|
+                                           
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
 export PS1="\[$(tput bold)\]\[\033[38;5;9m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[\033[38;5;9m\]]\\$\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
@@ -11,6 +17,7 @@ alias gitA='git add . && git commit'
 alias fA='fzf -e | xargs -I{} -0 xdg-open {};bg;disown'
 alias fuck='sudo $(history -p !!)'
 alias why='dmesg -w | less'
+alias cclip='xclip -se c'
 function mkc() {
 	mkdir $1
 	cd $1

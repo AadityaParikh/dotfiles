@@ -35,8 +35,8 @@ bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 
 # Program Management #
-bindsym $mod+Shift+d --release exec "killall dunst" 
-bindsym $mod+Ctrl+Shift+d --release exec "killall compton" 
+bindsym $mod+Shift+d --release exec "killall dunst"
+bindsym $mod+Ctrl+Shift+d --release exec "killall compton"
 
 
 ## WINDOWS ##
@@ -44,31 +44,27 @@ bindsym $mod+Ctrl+Shift+d --release exec "killall compton"
 default_border none
 new_float normal
 hide_edge_borders both
-# Moving
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+# Position
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 # Orientation
 bindsym $mod+Ctrl+Shift+semicolon split h
 bindsym $mod+Shift+semicolon split v
 bindsym $mod+semicolon split toggle
-# Resizing?
+# Size
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-bindsym $mod+y resize shrink width 25 px or 25 ppt
-bindsym $mod+u resize grow height 25 px or 25 ppt
-bindsym $mod+i resize shrink height 25 px or 25 ppt
-bindsym $mod+o resize grow width 25 px or 25 ppt
-bindsym $mod+Shift+y resize shrink width 5 px or 5 ppt
-bindsym $mod+Shift+u resize grow height 5 px or 5 ppt
-bindsym $mod+Shift+i resize shrink height 5 px or 5 ppt
-bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+Shift+Left resize shrink width 25 px or 25 ppt
+bindsym $mod+Ctrl+Shift+Down resize shrink height 25 px or 25 ppt
+bindsym $mod+Ctrl+Shift+Up resize grow height 25 px or 25 ppt
+bindsym $mod+Ctrl+Shift+Right resize grow width 25 px or 25 ppt
 bindsym $mod+minus gaps inner all minus 5
 bindsym $mod+plus gaps inner all plus 5
 
