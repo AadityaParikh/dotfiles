@@ -15,6 +15,7 @@ alias pls="sudo "
 alias bc="bc -sql"
 alias fA="fzf -e | xargs -I{} -0 xdg-open {};bg;disown"
 alias o="xdg-open"
+alias v="vim"
 alias fuck='sudo $(history -p !!)'
 alias why="dmesg -w | less"
 alias cclip="xclip -se c"
