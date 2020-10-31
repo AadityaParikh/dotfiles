@@ -1,8 +1,8 @@
-#       _                  _            _           
-#  __ _| |_ ___  _ __ ___ (_) _____   _(_)_ __ ___  
-# / _` | __/ _ \| '_ ` _ \| |/ __\ \ / / | '_ ` _ \ 
-#| (_| | || (_) | | | | | | | (__ \ V /| | | | | | |
-# \__,_|\__\___/|_| |_| |_|_|\___| \_/ |_|_| |_| |_|
+"        _                  _            _           
+"   __ _| |_ ___  _ __ ___ (_) _____   _(_)_ __ ___  
+"  / _` | __/ _ \| '_ ` _ \| |/ __\ \ / / | '_ ` _ \ 
+" | (_| | || (_) | | | | | | | (__ \ V /| | | | | | |
+"  \__,_|\__\___/|_| |_| |_|_|\___| \_/ |_|_| |_| |_|
                                                    
 " Misc.
 filetype plugin on
@@ -12,10 +12,10 @@ set tabstop=4
 set shiftwidth=0
 set invnumber
 set invrelativenumber
-
-" Folding
 set foldmethod=syntax 
-set fdn=2
+set fdn=3
+nnoremap ZW			:w<CR>
+nnoremap <c-j>		<Esc>/<++><CR><Esc>cf>
 
 " Colors
 colo default
@@ -23,8 +23,8 @@ highlight LineNr ctermfg=Cyan
 highlight Folded cterm=bold ctermbg=Black ctermfg=White
 
 " Numbers
-nnoremap <c-n> 		:set invnumber<CR>
-nnoremap <c-l> 		:set invrelativenumber<CR>
+nnoremap <c-n> 		:set number!<CR>
+nnoremap <c-l> 		:set relativenumber!<CR>
 
 " Braces
 inoremap {			{}<Left>
@@ -45,9 +45,6 @@ inoremap <expr> " 	strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "
 inoremap ""			"
 vnoremap qq" 		<Esc>`>a"<Esc>`<i"<Esc>
 
-" Placeholder
-nnoremap <c-j>		<Esc>/<++><CR><Esc>cf>
-
 " Compilation
 nnoremap <f9>		:make<CR>
 autocmd FileType java	nnoremap <f5> :!javac %<CR>
@@ -57,5 +54,3 @@ autocmd FileType c		nnoremap <f6> :!./a.out<CR>
 autocmd FileType scad	nnoremap <f5> :!openscad -o %<.stl %<CR>
 autocmd FileType scad	nnoremap <f6> :!fstl %<.stl<CR>
 
-" Writing with a shortcut
-nnoremap ZW			:w<CR>
