@@ -10,14 +10,24 @@ export PS1="\[$(tput bold)\]\[\033[38;5;9m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W
 export EDITOR="vim"
 
 #ALIASES
-alias gib='pacman -S'
-alias pls='sudo '
-alias bc='bc -sql'
-alias gitA='git add . && git commit'
-alias fA='fzf -e | xargs -I{} -0 xdg-open {};bg;disown'
+alias gib="pacman -S"
+alias pls="sudo "
+alias bc="bc -sql"
+alias fA="fzf -e | xargs -I{} -0 xdg-open {};bg;disown"
+alias o="xdg-open"
 alias fuck='sudo $(history -p !!)'
-alias why='dmesg -w | less'
-alias cclip='xclip -se c'
+alias why="dmesg -w | less"
+alias cclip="xclip -se c"
+
+alias gitS="git status"
+alias gitA="git add . && git commit"
+alias gitF="git fetch"
+alias gitP="git push"
+alias gitU="git fetch && echo ^C to not pull, enter to pull && read ashtfjhdf && git pull"
+alias gitR="git restore --staged"
+alias gitC="git commit"
+alias gitD="git diff --staged"
+
 function mkc() {
 	mkdir $1
 	cd $1
