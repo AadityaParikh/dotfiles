@@ -7,6 +7,7 @@
 " Misc.
 filetype plugin on
 set ai
+set ic
 syntax on 
 set tabstop=4
 set shiftwidth=0
@@ -15,6 +16,7 @@ set invrelativenumber
 set foldmethod=syntax 
 set fdn=3
 nnoremap ZW			:w<CR>
+vnoremap .			:norm .<CR>
 nnoremap <c-j>		<Esc>/<++><CR><Esc>cf>
 
 " Colors
@@ -22,9 +24,9 @@ colo default
 highlight LineNr ctermfg=Cyan
 highlight Folded cterm=bold ctermbg=Black ctermfg=White
 
-" Numbers
-nnoremap <c-n> 		:set number!<CR>
-nnoremap <c-l> 		:set relativenumber!<CR>
+" Extra Info
+nnoremap <c-l> 		:set hlsearch!<CR>
+nnoremap <c-n> 		:set relativenumber!<CR>
 
 " Braces
 inoremap {			{}<Left>
