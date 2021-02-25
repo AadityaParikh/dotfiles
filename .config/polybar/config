@@ -7,7 +7,7 @@
 [bar/bar]
 modules-left = i3 date
 modules-center = mpd
-modules-right = todo ram cpu battery wireless-network ping 
+modules-right = cpu ram ping vol battery wireless-network 
 background = #000000
 foreground = #FFFFFF
 line-size = 1
@@ -19,6 +19,16 @@ font-0 = "SFNS Display:style=Regular"
 font-1 = "Font Awesome 5 Free:style=Regular"
 font-2 = "Font Awesome 5 Free:style=Solid"
 font-3 = "Font Awesome 5 Brands:style=Regular"
+
+[module/vol]
+type = custom/script
+
+exec = "/home/atomic/.scripts/volume.sh"
+
+interval = 0.5
+
+label = VOL %output%%
+
 
 [module/todo]
 type = custom/script
@@ -118,7 +128,7 @@ label-full = BAT %percentage%%
 type = internal/mpd
 
 host = 127.0.0.1
-port - 6600
+port = 6600
 
 format-online = <label-song> 	[<label-time>]
 label-song = %artist% - %album% - %title%

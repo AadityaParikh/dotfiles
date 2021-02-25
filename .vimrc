@@ -18,6 +18,8 @@ set fdn=3
 nnoremap ZW			:w<CR>
 vnoremap .			:norm .<CR>
 nnoremap <c-j>		<Esc>/<++><CR><Esc>cf>
+nnoremap <c-a>		ggVG
+inoremap <c-g>		<Esc>dawa
 
 " Colors
 colo default

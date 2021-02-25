@@ -19,6 +19,8 @@ alias v="vim"
 alias fuck='sudo $(history -p !!)'
 alias why="dmesg -w | less"
 alias cclip="xclip -se c"
+alias R="R --quiet"
+alias droid="pacmd load-module module-alsa-source device=hw:Loopback,1,0"
 
 alias gitS="git status"
 alias gitA="git add . && git commit"
@@ -35,3 +37,4 @@ function mkc() {
 }
 
 export PATH=$PATH:/home/atomic/.scripts/
+[ -f "/home/atomic/.ghcup/env" ] && source "/home/atomic/.ghcup/env" # ghcup-env
