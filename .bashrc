@@ -21,6 +21,7 @@ alias why="dmesg -w | less"
 alias cclip="xclip -se c"
 alias R="R --quiet"
 alias droid="pacmd load-module module-alsa-source device=hw:Loopback,1,0"
+alias ls="ls --color=auto"
 
 alias gitS="git status"
 alias gitA="git add . && git commit"
