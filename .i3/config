@@ -16,7 +16,7 @@ smart_gaps on
 bindsym $mod+Return exec st #Terminal
 bindsym $mod+q kill 
 bindsym $mod+Ctrl+m exec st -e 'pulsemixer' #Audio Settings
-bindsym $mod+w exec firefox #Browser
+bindsym $mod+w exec discord #Discord
 bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
