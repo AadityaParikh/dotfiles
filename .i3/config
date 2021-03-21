@@ -16,7 +16,7 @@ smart_gaps on
 bindsym $mod+Return exec st #Terminal
 bindsym $mod+q kill 
 bindsym $mod+Ctrl+m exec st -e 'pulsemixer' #Audio Settings
-bindsym $mod+w exec discord #Discord
+bindsym $mod+w exec "i3-msg workspace 10; discord"
 bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
@@ -24,15 +24,14 @@ bindsym $mod+Shift+n exec /home/atomic/.scripts/ocr.sh
 bindsym $mod+Ctrl+n exec /home/atomic/.scripts/colorPick.sh
 bindsym $mod+Shift+t exec /home/atomic/.scripts/clipInsert.sh
 bindsym $mod+b exec "bluetoothctl power on && bluetoothctl devices | rofi -dmenu -p 'Bluetooth Devices' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
-bindsym $mod+Shift+z exec --no-startup-id maim -kB -f png | xclip -se c -t image/png
-bindsym $mod+z --release exec --no-startup-id maim -skB -f png | xclip -se c -t image/png
+bindsym $mod+z --release exec --no-startup-id maim -usB -f png | xclip -se c -t image/png
 bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`" "`cal`"
+bindsym $mod+Shift+r restart
 
 # Rofi Scripts
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+x exec /home/atomic/.scripts/powermenu.sh #Power Menu
 bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
-bindsym $mod+Shift+m exec /home/atomic/.scripts/mount.sh # Mounting Script
 
 # Program Management #
 bindsym $mod+Shift+d --release exec "killall dunst"
@@ -67,6 +66,20 @@ bindsym $mod+Ctrl+Shift+Up resize grow height 25 px or 25 ppt
 bindsym $mod+Ctrl+Shift+Right resize grow width 25 px or 25 ppt
 bindsym $mod+minus gaps inner all minus 5
 bindsym $mod+plus gaps inner all plus 5
+# Misc
+workspace_auto_back_and_forth yes
+
+## APPEARANCE ##
+# Color
+# class					border  bground text   indicator child_border
+client.focused			#FFFFFF #000000 #FFFFFF #000000 #000000
+client.focused_inactive	#FFFFFF #000000 #FFFFFF #000000 #000000
+client.unfocused		#FFFFFF #000000 #FFFFFF #000000 #000000
+client.urgent			#FFFFFF #000000 #FFFFFF #000000 #000000
+client.placeholder		#FFFFFF #000000 #FFFFFF #000000 #000000
+client.background		#000000
+# Font
+font pango: Iosevka 14px
 
 
 ## WORKSPACES ##
@@ -121,9 +134,3 @@ exec --no-startup-id mpd
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix-xcursor
 exec_always --no-startup-id /home/atomic/.config/polybar/launch.sh
-
-
-## SYSTEM MANAGEMENT ##
-bindsym $mod+Shift+r restart
-
-
