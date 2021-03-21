@@ -35,7 +35,6 @@ bindsym $mod+m exec /home/atomic/.scripts/musicchange.sh #Music Player
 
 # Program Management #
 bindsym $mod+Shift+d --release exec "killall dunst"
-bindsym $mod+Ctrl+Shift+d --release exec "killall compton"
 
 
 ## WINDOWS ##
@@ -127,7 +126,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 # Applications
 exec --no-startup-i /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id nitrogen --restore; sleep 1
-exec_always --no-startup-id compton -b -f -m=0.25 --config=/home/atomic/.config/compton/config
+exec_always --no-startup-id picom
 exec --no-startup-id xset r rate 300 50
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id mpd
