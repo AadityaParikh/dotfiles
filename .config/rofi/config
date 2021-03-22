@@ -11,7 +11,7 @@ rofi.fullscreen: true
 rofi.hide-scrollbar: true
 rofi.font: Iosevka Term 14
 
-rofi.color-normal: #000000, #ffffff, #000000, #000000, #ffffff
-rofi.color-urgent: #000000, #ffffff, #000000, #000000, #ffffff
+rofi.color-normal: #000000, #aaaaaa, #000000, #000000, #ffffff
+rofi.color-urgent: #000000, #aaaaaa, #000000, #000000, #ffffff
 rofi.color-active: #000000, #ffffff, #000000, #000000, #ffffff
 rofi.color-window: #000000, #000000, #ffffff
