@@ -20,7 +20,6 @@ alias fuck='sudo $(history -p !!)'
 alias why="dmesg -w | less"
 alias cclip="xclip -se c"
 alias R="R --quiet"
-alias droid="pacmd load-module module-alsa-source device=hw:Loopback,1,0"
 alias ls="ls --color=auto"
 
 alias gitS="git status"
@@ -31,6 +30,9 @@ alias gitU="git fetch && echo ^C to not pull, enter to pull && read ashtfjhdf &&
 alias gitR="git restore --staged"
 alias gitC="git commit"
 alias gitD="git diff --staged"
+
+alias droid="pacmd load-module module-alsa-source device=hw:Loopback,1,0"
+alias pulse="pulseaudio -k && pulseaudio --start && mpd"
 
 function mkc() {
 	mkdir $1
