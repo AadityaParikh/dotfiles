@@ -71,11 +71,11 @@ workspace_auto_back_and_forth yes
 ## APPEARANCE ##
 # Color
 # class					border  bground text   indicator child_border
-client.focused			#FFFFFF #000000 #FFFFFF #000000 #000000
-client.focused_inactive	#FFFFFF #000000 #FFFFFF #000000 #000000
-client.unfocused		#FFFFFF #000000 #FFFFFF #000000 #000000
-client.urgent			#FFFFFF #000000 #FFFFFF #000000 #000000
-client.placeholder		#FFFFFF #000000 #FFFFFF #000000 #000000
+client.focused			#FFFFFF #000000 #FFFFFF #000000 #FFFFFF
+client.focused_inactive	#FFFFFF #000000 #FFFFFF #000000 #FFFFFF
+client.unfocused		#FFFFFF #000000 #FFFFFF #000000 #FFFFFF
+client.urgent			#FFFFFF #000000 #FFFFFF #000000 #FFFFFF
+client.placeholder		#FFFFFF #000000 #FFFFFF #000000 #FFFFFF
 client.background		#000000
 # Font
 font pango: Iosevka 14px
