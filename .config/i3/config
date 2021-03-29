@@ -13,7 +13,7 @@ gaps inner 0
 smart_gaps on
 
 ## CALLING PROGRAMS ##
-bindsym $mod+Return exec st #Terminal
+bindsym $mod+Return exec alacritty #Terminal
 bindsym $mod+q kill 
 bindsym $mod+Ctrl+m exec st -e 'pulsemixer' #Audio Settings
 bindsym $mod+w exec "i3-msg workspace 10; discord"
