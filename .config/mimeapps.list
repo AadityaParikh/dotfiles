@@ -163,6 +163,7 @@ audio/m3u=mpv.desktop
 x-scheme-handler/msteams=teams.desktop
 x-scheme-handler/eclipse+command x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop
 x-scheme-handler/discord-455712169795780630=discord-455712169795780630.desktop
+inode/directory=nnn.desktop;ranger.desktop;pcmanfm.desktop;
 
 [Added Associations]
 x-scheme-handler/ftp=firefox.desktop;
