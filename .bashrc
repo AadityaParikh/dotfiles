@@ -8,6 +8,7 @@ set -o vi
 bind -m vi-insert "\C-l":clear-screen
 export PS1="\[$(tput bold)\]\[\033[38;5;9m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[\033[38;5;9m\]]\\$\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 export EDITOR="vim"
+export VISUAL="vim"
 
 #ALIASES
 alias gib="pacman -S"
@@ -41,3 +42,9 @@ function mkc() {
 
 export PATH=$PATH:/home/atomic/.scripts/
 [ -f "/home/atomic/.ghcup/env" ] && source "/home/atomic/.ghcup/env" # ghcup-env
+
+#NNN Config
+if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
+    source /usr/share/nnn/quitcd/quitcd.bash_zsh
+fi
+alias n="n -eEoH"
