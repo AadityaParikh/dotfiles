@@ -28,6 +28,7 @@ text/x-tex=vim.desktop
 text/x-c=vim.desktop
 text/x-c++=vim.desktop
 application/x-shellscript=vim.desktop
+application/json=vim.desktop
 image/jpeg=mupdf.desktop
 image/png=mupdf.desktop
 image/pjpeg=mupdf.desktop
