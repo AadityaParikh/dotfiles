@@ -15,8 +15,8 @@ smart_gaps on
 
 ## CALLING PROGRAMS ##
 bindsym $mod+Return exec $term #Terminal
-bindsym $mod+Ctrl+m exec $term -e 'pulsemixer' #Audio Settings
-bindsym $mod+r exec $term -e 'intrpn' #Calculator
+bindsym $mod+Ctrl+m exec "$term -e 'pulsemixer'"
+bindsym $mod+r exec "$term -e 'intrpn'"
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+q kill 
 bindsym $mod+w exec "i3-msg workspace 10; discord"
