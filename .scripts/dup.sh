@@ -1,2 +1,2 @@
 #!/bin/sh
-st & disown
+xdg-terminal & disown
