@@ -24,10 +24,10 @@ bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
 bindsym $mod+Shift+n exec ~/.scripts/ocr.sh
+bindsym $mod+x exec ~/.scripts/powermenu.sh #Power Menu
+bindsym $mod+m exec ~/.scripts/musicchange.sh #Music Player
 bindsym $mod+Ctrl+n exec ~/colorPick.sh
 bindsym $mod+Shift+t exec ~/clipInsert.sh
-bindsym $mod+x exec ~/powermenu.sh #Power Menu
-bindsym $mod+m exec ~/musicchange.sh #Music Player
 bindsym $mod+b exec "bluetoothctl power on && bluetoothctl devices | rofi -dmenu -p 'Bluetooth Devices' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
 bindsym $mod+z --release exec --no-startup-id maim -usB -f png | xclip -se c -t image/png
 bindsym $mod+t --release exec notify-send "`date +%A\ %B\ %d\ %r`" "`cal`"
