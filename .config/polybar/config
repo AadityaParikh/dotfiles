@@ -7,7 +7,7 @@
 [bar/bar]
 modules-left = i3 date
 modules-center = mpd
-modules-right = cpu ram ping vol battery wireless-network 
+modules-right = cpu ram ping battery wireless-network 
 background = #000000
 foreground = #FFFFFF
 line-size = 1
