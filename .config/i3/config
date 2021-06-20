@@ -21,7 +21,7 @@ bindsym $mod+h exec "$term -e 'htop'"
 bindsym $mod+r exec "$term -e 'nnn -eEoH'"
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+q kill 
-bindsym $mod+w exec "i3-msg workspace 10; discord"
+bindsym $mod+w exec "i3-msg workspace 9; discord"
 bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
