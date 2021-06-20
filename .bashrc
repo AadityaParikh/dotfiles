@@ -41,6 +41,15 @@ function mkc() {
 }
 
 export PATH=$PATH:/home/atomic/.scripts/
+
+export PATH=$PATH:/home/atomic/.dotnet/tools # I hate microsoft
+export DOTNET_CLI_TEMETRY_OPTOUT=1 # I really hate microsoft
+# imagine having telemetry for a fucking cli
+# you greedy piece of shit
+# you don't need to collect people's data from everywhere
+# don't you have enough already
+# but your gluttonous ass needs to put telemetry in a FUCKING CLI
+
 [ -f "/home/atomic/.ghcup/env" ] && source "/home/atomic/.ghcup/env" # ghcup-env
 
 #NNN Config
