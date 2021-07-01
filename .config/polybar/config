@@ -5,9 +5,9 @@
 ; \__,_|\__\___/|_| |_| |_|_|\___|_.__/ \__,_|_|
 
 [bar/bar]
-modules-left = i3 date
+modules-left = i3
 modules-center = mpd
-modules-right = cpu ram ping battery wireless-network 
+modules-right = cpu ram ping date 
 background = #000000
 foreground = #FFFFFF
 line-size = 1
@@ -16,9 +16,6 @@ line-color = #FFFFFF
 module-margin = 1
 
 font-0 = "Iosevka:pixelsize=13:antialias=true:autohint=true"
-font-1 = "Font Awesome 5 Free:style=Regular"
-font-2 = "Font Awesome 5 Free:style=Solid"
-font-3 = "Font Awesome 5 Brands:style=Regular"
 
 [module/vol]
 type = custom/script
@@ -46,14 +43,14 @@ exec = /home/atomic/.scripts/ping.sh
 
 interval = 1
 
-label = レイテンシー %output%
+label = "時間  %output%ms"
 
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 
 format = <label>
-label = プロセッサー %percentage%%
+label = "時間 %percentage%%"
 
 ramp-coreload-spacing = 1
 ramp-coreload-0 = ▁
@@ -70,7 +67,7 @@ type = internal/memory
 interval = 0.5 
 
 format = <label>
-label = 記憶 %percentage_used%%
+label = "記憶 %percentage_used%%"
 
 ramp-used-0 = ▁
 ramp-used-1 = ▂
