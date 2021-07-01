@@ -10,6 +10,8 @@ export PS1="\[$(tput bold)\]\[\033[38;5;9m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W
 export EDITOR="vim"
 export VISUAL="vim"
 
+[ $TERM == "linux" ] && ~/.scripts/changeTerminalColorsAmber.sh
+
 #ALIASES
 alias gib="pacman -S"
 alias pls="sudo "
@@ -40,9 +42,11 @@ function mkc() {
 	cd $1
 }
 
-export PATH=$PATH:/home/atomic/.scripts/
+export RACK_DIR="/home/atomic/Rack-SDK"
 
-export PATH=$PATH:/home/atomic/.dotnet/tools # I hate microsoft
+export PATH=$PATH:~/.scripts/
+
+export PATH=$PATH:~/.dotnet/tools # I hate microsoft
 export DOTNET_CLI_TEMETRY_OPTOUT=1 # I really hate microsoft
 # imagine having telemetry for a fucking cli
 # you greedy piece of shit
@@ -50,7 +54,7 @@ export DOTNET_CLI_TEMETRY_OPTOUT=1 # I really hate microsoft
 # don't you have enough already
 # but your gluttonous ass needs to put telemetry in a FUCKING CLI
 
-[ -f "/home/atomic/.ghcup/env" ] && source "/home/atomic/.ghcup/env" # ghcup-env
+[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
 
 #NNN Config
 if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
