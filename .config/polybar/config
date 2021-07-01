@@ -15,7 +15,7 @@ line-color = #FFFFFF
 
 module-margin = 1
 
-font-0 = "Iosevka:pixelsize=13:antialias=true:autohint=true:style=Regular"
+font-0 = "Iosevka:pixelsize=13:antialias=true:autohint=true"
 font-1 = "Font Awesome 5 Free:style=Regular"
 font-2 = "Font Awesome 5 Free:style=Solid"
 font-3 = "Font Awesome 5 Brands:style=Regular"
@@ -46,14 +46,14 @@ exec = /home/atomic/.scripts/ping.sh
 
 interval = 1
 
-label = PING %output%
+label = レイテンシー %output%
 
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 
 format = <label>
-label = CPU %percentage%%
+label = プロセッサー %percentage%%
 
 ramp-coreload-spacing = 1
 ramp-coreload-0 = ▁
@@ -70,7 +70,7 @@ type = internal/memory
 interval = 0.5 
 
 format = <label>
-label = RAM %percentage_used%%
+label = 記憶 %percentage_used%%
 
 ramp-used-0 = ▁
 ramp-used-1 = ▂
