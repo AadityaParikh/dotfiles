@@ -5,7 +5,7 @@
 powerOff=""
 reboot=""
 lock=""
-options="$lock\n$reboot\n$powerOff"
+options="$reboot\n$powerOff\n$lock"
 
 chosen="$(echo -e "$options" | rofi -dmenu -p "" -selected-row 2)"
 case $chosen in
