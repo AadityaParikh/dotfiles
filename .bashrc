@@ -6,7 +6,7 @@
                                            
 set -o vi
 bind -m vi-insert "\C-l":clear-screen
-export PS1="\[$(tput bold)\]\[\033[38;5;9m\][\[$(tput sgr0)\]\[\033[38;5;15m\]\W\[$(tput sgr0)\]\[\033[38;5;9m\]]\\$\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;5m\][\[$(tput sgr0)\]\W\[$(tput sgr0)\]\[\033[38;5;5m\]][\[$(tput sgr0)\]\$?\[$(tput sgr0)\]\[\033[38;5;5m\]]\[$(tput sgr0)\]\\$\[$(tput sgr0)\] "
 export EDITOR="vim"
 export VISUAL="vim"
 
