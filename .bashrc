@@ -24,6 +24,8 @@ alias why="dmesg -w | less"
 alias cclip="xclip -se c"
 alias R="R --quiet"
 alias ls="ls --color=auto"
+alias ne="neofetch --source ~/51upscaled"
+alias ytfzf='ytfzf -fD'
 
 alias gitS="git status"
 alias gitA="git add . && git commit"
@@ -35,12 +37,13 @@ alias gitC="git commit"
 alias gitD="git diff --staged"
 
 alias droid="pacmd load-module module-alsa-source device=hw:Loopback,1,0"
-alias pulse="pulseaudio -k && pulseaudio --start && mpd"
 
 function mkc() {
 	mkdir $1
 	cd $1
 }
+
+YTFZF_EXTMENU='rofi -dmenu -p "yt"'
 
 export RACK_DIR="/home/atomic/Rack-SDK"
 
