@@ -10,7 +10,7 @@ export PS1="\[\033[38;5;5m\][\[$(tput sgr0)\]\W\[$(tput sgr0)\]\[\033[38;5;5m\]]
 export EDITOR="vim"
 export VISUAL="vim"
 
-[ $TERM == "linux" ] && ~/.scripts/changeTerminalColorsAmber.sh
+[ $TERM == "linux" ] && ~/.scripts/changeTerminalColors.sh
 
 #ALIASES
 alias gib="pacman -S"
@@ -43,7 +43,9 @@ function mkc() {
 	cd $1
 }
 
-YTFZF_EXTMENU='rofi -dmenu -p "yt"'
+export STM32CUBE_PATH="/opt/STM32CubeF1"
+
+export YTFZF_EXTMENU='rofi -dmenu -p "yt"'
 
 export RACK_DIR="/home/atomic/Rack-SDK"
 
