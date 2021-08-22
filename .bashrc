@@ -13,7 +13,7 @@ export VISUAL="vim"
 [ $TERM == "linux" ] && ~/.scripts/changeTerminalColors.sh
 
 #ALIASES
-alias gib="pacman -S"
+alias gib="yay -S"
 alias pls="sudo "
 alias bc="bc -sql"
 alias fA="fzf -e | xargs -I{} -0 xdg-open {};bg;disown"
