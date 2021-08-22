@@ -1,6 +1,10 @@
 #!/bin/sh
 
-jackd --realtime --driver alsa --device hw:2,0 -n2 --period 1024 --rate 44100 &
+# init script should execute the below command before firing this script
+# jackd --realtime --driver alsa --device hw:2,0 -n2 --period 1024 --rate 44100 &
+
+
+
 a2j_control --ehw && a2j_control --start
 
 pulseaudio -k

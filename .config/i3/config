@@ -22,7 +22,7 @@ bindsym $mod+h exec "$term -e 'htop'"
 bindsym $mod+r exec "$term -e 'nnn' '-eEoH'"
 bindsym $mod+d exec rofi -show run #Program Launcher
 bindsym $mod+q kill 
-bindsym $mod+w exec "i3-msg workspace 10; discord"
+bindsym $mod+w exec "i3-msg workspace 10; discord-canary"
 bindsym $mod+Shift+w exec ~/.scripts/ytfzf.sh
 bindsym $mod+n border toggle
 bindsym $mod+Shift+a move scratchpad
@@ -105,6 +105,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 
 ## SYSTEM STARTUP ##
 # Sound
+exec jackd --realtime --driver alsa --device hw:2,0 -n2 --period 1024 --rate 44100
 exec ~/.scripts/jack.sh
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
