@@ -37,7 +37,7 @@ bindsym $mod+b exec "bluetoothctl power on && bluetoothctl devices | rofi -dmenu
 bindsym $mod+z exec --no-startup-id maim -usB -f png | xclip -se c -t image/png
 bindsym $mod+t exec notify-send "`date +%A\ %B\ %d\ %r`" "`cal`"
 bindsym $mod+Shift+r reload
-bindsym $mod+Shift+d exec "killall dunst"
+bindsym $mod+Shift+d exec "killall dunst; dunst"
 
 # XF86 Keys
 bindsym XF86AudioPlay exec mpc toggle
