@@ -1,0 +1,31 @@
+{
+	"layer": "top",
+	"modules-left": ["sway/workspaces"],
+	"modules-center": ["mpd"],
+	"modules-right": ["custom/ping","memory","cpu","clock"],
+
+	"clock": {
+		"format-alt": "{%H:%M}"
+	},
+
+	"mpd": {
+		"format-stopped": "",
+		"format": "{artist} - {album} - {title} [{elapsedTime:%M:%S}/{totalTime:%M:%S}]"
+	},
+
+	"custom/ping": {
+		"format": "速やか {} ",
+		"interval": 1,
+		"exec": "$HOME/.scripts/ping.sh 2> /dev/null"
+	},
+
+	"memory": {
+		"format": " 覚えて {percentage}% ",
+		"interval": 1
+	},
+
+	"cpu": {
+		"format": "加工 {usage}% ",
+		"interval": 1
+	}
+}
