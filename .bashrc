@@ -21,11 +21,11 @@ alias o="xdg-open"
 alias v="vim"
 alias fuck='sudo $(history -p !!)'
 alias why="dmesg -w | less"
-alias cclip="xclip -se c"
 alias R="R --quiet"
 alias ls="ls --color=auto"
 alias ne="neofetch --source ~/51upscaled"
 alias ytfzf='ytfzf -fD'
+alias lsblk='lsblk -f'
 
 alias gitS="git status"
 alias gitA="git add . && git commit"
