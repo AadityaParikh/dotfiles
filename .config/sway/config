@@ -23,6 +23,7 @@ bindsym $mod+Shift+c exec "$term -e 'calcurse'"
 bindsym $mod+h exec "$term -e 'htop'"
 bindsym $mod+r exec "$term -e 'nnn' '-eEoH'"
 bindsym $mod+d exec "$term -e ~/.scripts/menu.sh"
+bindsym $mod+m exec "$term -e ~/.scripts/musicchange.sh"
 bindsym $mod+q kill 
 bindsym $mod+Shift+w exec ~/.scripts/ytfzf.sh
 bindsym $mod+n border toggle
@@ -30,7 +31,6 @@ bindsym $mod+Shift+a move scratchpad
 bindsym $mod+a scratchpad show
 bindsym $mod+Shift+n exec ~/.scripts/ocr.sh
 bindsym $mod+x exec ~/.scripts/powermenu.sh #Power Menu
-bindsym $mod+m exec ~/.scripts/musicchange.sh #Music Player
 bindsym $mod+Ctrl+n exec ~/.scripts/colorPick.sh
 bindsym $mod+Shift+t exec ~/.scripts/clipInsert.sh
 bindsym $mod+b exec "bluetoothctl power on && bluetoothctl devices | rofi -dmenu -p 'Bluetooth Devices' | cut -d ' ' -f 2 | xargs -I % bluetoothctl connect %"
@@ -113,9 +113,10 @@ bindsym $mod+Shift+9 move container to workspace 9
 
 
 ## STARTUP ##
+exec_always 'killall waybar'
+exec_always waybar
 exec jackd --realtime --driver alsa --device hw:2,0 -n2 --period 1024 --rate 44100
+exec sleep 5
 exec ~/.scripts/jack.sh
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id dunst
-exec_always 'killall waybar'
-exec_always waybar
