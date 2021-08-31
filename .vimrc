@@ -6,11 +6,11 @@
                                                    
 " Misc.
 filetype plugin on
-set ai
-set ic
+set autoindent
+set ignorecase
 syntax on 
 set tabstop=4
-set shiftwidth=0
+set shiftwidth=2
 set invnumber
 set invrelativenumber
 set foldmethod=syntax 
@@ -32,7 +32,7 @@ nnoremap <c-n> 		:set relativenumber!<CR>
 " Braces
 inoremap {			{}<Left>
 inoremap <expr>	}	strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-inoremap {<CR>		{<CR>}<Esc>O<Tab>
+" inoremap {<CR>		{<CR>}<Esc>O<Tab>
 inoremap {{			{
 inoremap {}			{}
 vnoremap qq{ 		<Esc>`>a}<Esc>`<i{<Esc>
