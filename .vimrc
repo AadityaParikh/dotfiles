@@ -32,7 +32,7 @@ nnoremap <c-n> 		:set relativenumber!<CR>
 " Braces
 inoremap {			{}<Left>
 inoremap <expr>	}	strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
-" inoremap {<CR>		{<CR>}<Esc>O<Tab>
+inoremap {<CR>		{<CR>}<Esc>O<Tab>
 inoremap {{			{
 inoremap {}			{}
 vnoremap qq{ 		<Esc>`>a}<Esc>`<i{<Esc>
